@@ -119,7 +119,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
         <!-- BEGIN CART -->
-        <div class="top-cart-block">
+        <div class="top-cart-block" id="carrito">
           <div class="top-cart-info">
             <a href="javascript:void(0);" class="top-cart-info-count">Numero cursos</a>
             <a href="javascript:void(0);" class="top-cart-info-value">$$$</a>
@@ -127,15 +127,30 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
           <i class="fa fa-shopping-cart"></i>
                         
           <div class="top-cart-content-wrapper">
-            <div class="top-cart-content">
-              <ul class="scroller" style="height: 250px;">
+            <div class="top-cart-content" id="lista-carrito">
+              <ul class="scroller" style="height: 250px;" >
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html">
+                    <img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">Cantidad</span>
                   <strong><a href="shop-item.html"></a>articulo</strong>
                   <em>precio por articulo</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
+                <li>
+                  <table id="lista-carrito" class="table">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                </li>
+                
 
               </ul>
               <div class="text-right">
@@ -417,7 +432,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
         <!-- BEGIN SALE PRODUCT & NEW ARRIVALS -->
         <div class="row margin-bottom-40">
           <!-- BEGIN SALE PRODUCT -->
-          <div class="col-md-12 sale-product">
+          <div class="col-md-12 sale-product" id="lista-productos">
             <h2>Novedades</h2>
             <div class="owl-carousel owl-carousel5">
               <div>
@@ -429,9 +444,9 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                       <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                  <h3><a href="shop-item.html">prueba 1</a></h3>
                   <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                  <a href="" class="btn btn-default add2cart" data-id="1">Add to cart</a>
                   <div class="sticker sticker-new"></div>
                 </div>
               </div>
@@ -887,6 +902,8 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
             Layout.initTwitter();
         });
     </script>
+    <script src="assets/corporate/scripts/carrito.js"></script>
+    <script src="assets/corporate/scripts/pedido.js"></script>
 
     <!-- END PAGE LEVEL JAVASCRIPTS -->
 </body>
